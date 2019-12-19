@@ -1,0 +1,25 @@
+#注册到eureka的服务地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka/
+server:
+  port: 9002
+spring:
+  application:
+    name: ihrm-system
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ihrm?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    database: mysql
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+jwt:
+  config:
+    key: saas-ihrm
+    ttl: 3600000
